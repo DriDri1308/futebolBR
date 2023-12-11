@@ -1,77 +1,125 @@
-body, h1, h2, h3, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilo da página principal */
-.cartola-info-container {
+body {
+  margin: 20;
+  padding: 20;
+  background-image: url('./imagens/wepik-export-20231202001648CjQr.jpeg');
+  background-size: 100% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-.titulo {
-  color: black;
-  font-family: 'Arial', sans-serif;
-  font-size: 24px;
-  text-shadow: 2px 2px 4px #eeeef5;
-  margin-top: 100px; /* Ajuste para descer mais o título */
+.cartola-info-container {
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('./imagens/wepik-export-20231202001648CjQr.jpeg');
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cartola-info-container {
+    
+    
+    padding: 1px; 
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Sua Fonte Estilizada', sans-serif; /* Substitua 'Sua Fonte Estilizada' pela fonte desejada */
+  font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+  color: #007bff;
   margin-bottom: 20px;
+  margin-top: 100px;
+  text-shadow: 2px 2px 4px rgba(12, 14, 15, 0.8); /* Adiciona uma sombra nas letras para simular uma borda azul */
 }
 
 .cards-container {
+  margin-top: 60px; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; /* Adição para centralizar verticalmente os cards */
 }
 
 
 .card {
-  border: 5px solid #ddd;
-  margin: 10px;
-  width: calc(20% - 20px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  background-color: white;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(235, 227, 227, 0.2);
-}
-
-.card-imagem {
-  height: 30px;
-  background-size: contain;
-  background-position: left bottom;
-  position: relative;
-}
-
-.card-conteudo {
-  padding: 10px;
-}
-
-/* Rodapé */
-.rodape {
+  width: calc(10% - 15px);
+  height: 190px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 15px;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin-top: auto; 
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.botoes-container {
+  display: flex;
   justify-content: center;
-  color: white;
-  margin-top: auto; /* Mude para "auto" para empurrar o rodapé para a parte inferior */
-  background-color: #333;
-  padding: 10px; /* Adicione algum preenchimento para espaçamento */
+  margin: 20px 0;
 }
 
-.logo-rodape {
-  height: 50px;
-  margin-right: 10px;
+.botao {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 51px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+}
+.rodape-container {
+  background-color: #f0f0f0;
+  padding: 5px;
+  text-align: center;
 }
 
-.texto-sobre-imagem-rodape {
-  color: white;
-  margin-bottom: 10px;
+.rodape-item {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.lista-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.lista-times li {
+  list-style: none;
+  margin: 2px;
+}
+span {
+  color: #fcf8f7; /* Substitua #ff4500 pela cor desejada para o texto da página */
+  text-shadow: 2px 2px 4px rgba(12, 14, 15, 0.8);
 }
