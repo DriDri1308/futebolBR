@@ -1,8 +1,8 @@
 body {
-  margin: 20;
-  padding: 20;
+  margin: 0;
+  padding: 0;
   background-image: url('./imagens/wepik-export-20231202001648CjQr.jpeg');
-  background-size: 100% 100%; 
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -12,26 +12,7 @@ body {
 }
 
 .cartola-info-container {
-  
-  
-  body {
-    margin: 0;
-    padding: 0;
-    background-image: url('./imagens/wepik-export-20231202001648CjQr.jpeg');
-    background-size: 100% 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cartola-info-container {
-    
-    
-    padding: 1px; 
-  }
+  padding: 20px; 
 }
 
 h1 {
@@ -39,21 +20,21 @@ h1 {
   font-family: 'Sua Fonte Estilizada', sans-serif; 
   font-size: 2em;
   color: #007bff;
-  margin-bottom: 20px;
-  margin-top: 100px;
-  text-shadow: 2px 2px 4px rgba(12, 14, 15, 0.8); 
+  margin-bottom: 30px;
+  margin-top: 55px;
+  text-shadow: 5px 5px 8px rgba(12, 14, 15, 0.8); 
+  -webkit-text-stroke: 2px #007bff; /* Adiciona uma borda de 2 pixels com a cor #007bff */
+  padding: 10px;
 }
-
 .cards-container {
-  margin-top: 60px; 
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-
 .card {
-  width: calc(10% - 15px);
+  width: calc(12.5% - 15px); /* Ajuste para 8 cards por linha */
   height: 190px;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -63,19 +44,20 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 15px;
+  margin: 5px;
 }
 
 .card img {
-  width: 80%;
+  width: 70%;
   height: auto;
   object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card p {
   margin-top: auto; 
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   color: #333;
 }
 
@@ -93,21 +75,12 @@ h1 {
   border: none;
   cursor: pointer;
 }
+
 .rodape-container {
   background-color: #f0f0f0;
   padding: 5px;
   text-align: center;
 }
-
-.rodape-item {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 5px 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 
 .lista-times {
   display: flex;
@@ -119,7 +92,25 @@ h1 {
   list-style: none;
   margin: 2px;
 }
+
+.barra-pesquisa {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.barra-pesquisa input {
+  margin-right: 10px;
+}
+
+.barra-pesquisa button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 span {
-  color: #fcf8f7; 
+  color: #fcf8f7;
   text-shadow: 2px 2px 4px rgba(12, 14, 15, 0.8);
 }

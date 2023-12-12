@@ -5,7 +5,7 @@ import fallbackImage from './imagens/icon.webp';
 const CartolaInfo = () => {
   const [atletas, setAtletas] = useState([]);
   const [erro, setErro] = useState(null);
-  const atletasPorPagina = 8;
+  const atletasPorPagina = 6;
   const [paginaAtual, setPaginaAtual] = useState(1);
 
   useEffect(() => {
@@ -29,6 +29,11 @@ const CartolaInfo = () => {
   const indiceInicio = (paginaAtual - 1) * atletasPorPagina;
   const indiceFim = paginaAtual * atletasPorPagina;
   const atletasPaginaAtual = atletas.slice(indiceInicio, indiceFim);
+
+  const handleSearch = () => {
+    // Lógica de pesquisa
+    alert('Implemente sua lógica de pesquisa aqui!');
+  };
 
   return (
     <div className="cartola-info-container">
@@ -62,14 +67,15 @@ const CartolaInfo = () => {
         </button>
       </div>
 
-      
       <div className="rodape-container">
-        <p></p>
         <ul className="lista-times">
-          <li> Brasileirão 2023 :América-MG,
-Athletico-PR,Atlético-MG,Bahia,Botafogo,Corinthians,Coritiba,Cruzeiro,
-Cuiabá,Flamengo,Fluminense,Fortaleza,Goiás,Grêmio,Internacional,Palmeiras,Bragantino,Santos,São Paulo,Vasco da Gama</li>
+          <li>Brasileirão 2023: América-MG, Athletico-PR, Atlético-MG, Bahia, Botafogo, Corinthians, Coritiba, Cruzeiro, Cuiabá, Flamengo, Fluminense, Fortaleza, Goiás, Grêmio, Internacional, Palmeiras, Bragantino, Santos, São Paulo, Vasco da Gama</li>
         </ul>
+      </div>
+
+      <div className="barra-pesquisa">
+        <input type="text" placeholder="Pesquisar por letra" />
+        <button onClick={handleSearch}>Pesquisar</button>
       </div>
     </div>
   );
