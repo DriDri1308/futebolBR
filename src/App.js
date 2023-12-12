@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'; // Importe o estilo principal, se houver
-import CartolaInfo from './CartolaInfo'; // Importe o componente CartolaInfo
+import CartolaInfo from './CartolaInfo'; 
 
 const App = () => {
   return (

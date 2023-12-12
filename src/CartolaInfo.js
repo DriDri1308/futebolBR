@@ -5,6 +5,7 @@ import fallbackImage from './imagens/icon.webp';
 const CartolaInfo = () => {
   const [atletas, setAtletas] = useState([]);
   const [erro, setErro] = useState(null);
+  const [filtro, setFiltro] = useState('');
   const atletasPorPagina = 6;
   const [paginaAtual, setPaginaAtual] = useState(1);
 
@@ -26,14 +27,17 @@ const CartolaInfo = () => {
     event.target.src = fallbackImage;
   };
 
+  const handleSearch = () => {
+    const atletasFiltrados = atletas.filter((atleta) =>
+      atleta.nome.toLowerCase().includes(filtro.toLowerCase())
+    );
+    setAtletas(atletasFiltrados);
+    setPaginaAtual(5); // Reinicia a página para 1 após a pesquisa
+  };
+
   const indiceInicio = (paginaAtual - 1) * atletasPorPagina;
   const indiceFim = paginaAtual * atletasPorPagina;
   const atletasPaginaAtual = atletas.slice(indiceInicio, indiceFim);
-
-  const handleSearch = () => {
-    // Lógica de pesquisa
-    alert('Implemente sua lógica de pesquisa aqui!');
-  };
 
   return (
     <div className="cartola-info-container">
@@ -58,11 +62,17 @@ const CartolaInfo = () => {
       )}
 
       <div className="botoes-container">
-        <button className="botao" onClick={() => setPaginaAtual(paginaAtual - 1)}>
+        <button
+          className="botao"
+          onClick={() => setPaginaAtual((prevPagina) => Math.max(prevPagina - 1, 1))}
+        >
           Página Anterior
         </button>
         <span>Página {paginaAtual}</span>
-        <button className="botao" onClick={() => setPaginaAtual(paginaAtual + 1)}>
+        <button
+          className="botao"
+          onClick={() => setPaginaAtual((prevPagina) => prevPagina + 1)}
+        >
           Próxima Página
         </button>
       </div>
@@ -74,7 +84,12 @@ const CartolaInfo = () => {
       </div>
 
       <div className="barra-pesquisa">
-        <input type="text" placeholder="Pesquisar por letra" />
+        <input
+          type="text"
+          placeholder="Pesquisar por nome"
+          value={filtro}
+          onChange={(e) => setFiltro(e.target.value)}
+        />
         <button onClick={handleSearch}>Pesquisar</button>
       </div>
     </div>
